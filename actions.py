@@ -18,5 +18,20 @@ def show_all_students():
     print(students)
 
 
-def calculate_score_avg():
-    print("")
+def show_top_score_avg():
+    sorted_students = sorted(students, key=lambda x: x['score_avg'], reverse=True)
+    top_3 = sorted_students[:3]
+    print("This is our TOP 3 STUDENTS!!!")
+    print(" ")
+    for student in top_3:
+        print (student['name'])
+        print (student['score_avg'])
+        print(" ")
+
+
+def show_general_avg_score():
+    all_students_avg = 0
+    for student in students:
+        all_students_avg += student["score_avg"]
+    total = all_students_avg / len(students)
+    print(f"The general score average for all the students is: {total}")

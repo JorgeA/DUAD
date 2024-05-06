@@ -1,4 +1,5 @@
 import actions
+import data
 
 
 def menu(user_option):
@@ -26,13 +27,13 @@ def menu(user_option):
                     print("Showing all students...")
                     actions.show_all_students()
                 elif user_option == 3:
-                    actions.calculate_score_avg()
+                    actions.show_top_score_avg()
                 elif user_option == 4:
-                    print("Calculating average grade...")
+                    actions.show_general_avg_score()
                 elif user_option == 5:
-                    print("Exporting to CSV...")
+                    data.export_students_csv("students.csv",actions.students)
                 elif user_option == 6:
-                    print("Importing from CSV...")
+                    data.import_students("students.csv")
                 elif user_option == 7:
                     break
                 else:
