@@ -41,5 +41,6 @@ def menu(user_option):
                 
             except ValueError as error:
                 print("Type a valid numeric value option from the menu.")
+                print("")
                 print(f"Error info.{error}")
             
