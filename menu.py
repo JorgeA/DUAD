@@ -5,7 +5,6 @@ import data
 def menu(user_option):
         while True:
             try:
-
                 print(' ')
                 print('Escoja la operacion a realizar:')
                 print(' ')
