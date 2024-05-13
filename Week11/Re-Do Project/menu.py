@@ -1,5 +1,7 @@
 import actions
 import data
+from test import students
+import test
 
 
 def menu(user_option):
@@ -22,7 +24,8 @@ def menu(user_option):
 
                 if user_option == 1:
                     print("Adding a student...")
-                    actions.add_student()
+                    new_student = test.create_student()
+                    students.append(new_student)
                 elif user_option == 2:
                     print("Showing all students...")
                     actions.show_all_students()

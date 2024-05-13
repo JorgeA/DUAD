@@ -1,20 +1,33 @@
 students = []
 
 def add_student():
-    try:
-        student = {}
-        student["name"]=input("Student's full name: ")
-        student["group"]=input("Student's group number: ")
-        student["spanish_score"]=input("Student's spanish score: ")
-        student["english_score"]=input("Student's english score: ")
-        student["scienses_score"]=input("Student's sciences score: ")
-        student["social_studies_score"]=input("Student's social studies score: ")
-        student["score_avg"]= (int(student["spanish_score"])+int(student["english_score"])+int(student["social_studies_score"])+int(student["scienses_score"])) /4
-        print("")
-        print("Student successfully added!!")
-        students.append(student)
-    except Exception as error:
-        print(f'Ha ocurrido un error: {error}')
+    while True:
+        try:
+            student = {}
+            student["name"]=input("Student's full name: ")
+            student["group"]=input("Student's group number: ")
+            student["spanish_score"]=int(input("Student's spanish score: "))
+            student["spanish_score"]=validate_score(student["spanish_score"])
+            student["english_score"]=int(input("Student's english score: "))
+            student["english_score"]=validate_score(student["english_score"])
+            student["scienses_score"]=int(input("Student's sciences score: "))
+            student["scienses_score"]=validate_score(student["scienses_score"])
+            student["social_studies_score"]=int(input("Student's social studies score: "))
+            student["social_studies_score"]=validate_score(student["social_studies_score"])
+            student["score_avg"]= (int(student["spanish_score"])+int(student["english_score"])+int(student["social_studies_score"])+int(student["scienses_score"])) /4
+            print("")
+            print("Student successfully added!!")
+            students.append(student)
+            break
+        except ValueError as error:
+            print(f'Ha ocurrido un error: {error}')
+            print("Ingrese una nota en formato valido")
+
+def validate_score(score):
+    if 0 < score > 100:
+        print("Pro favor ingrese una notra valida entre 0 y 100")
+        score = input("Student's correct score: ")
+    return score
 
 
 def show_all_students():
