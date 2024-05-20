@@ -1,39 +1,36 @@
-students = [{'name': 'Jorge', 
-            'group': '10-3',
-            'spanish_score': '90',
-            'english_score': '80',
-            'scienses_score': '70',
-            'social_studies_score': '96',
-            'score_avg': 84.0},
-            {'name': 'Juan', 
-            'group': '10-2',
-            'spanish_score': '90',
-            'english_score': '80',
-            'scienses_score': '90',
-            'social_studies_score': '96',
-            'score_avg': 89.0},
-            {'name': 'Ana', 
-            'group': '11-2',
-            'spanish_score': '90',
-            'english_score': '90',
-            'scienses_score': '90',
-            'social_studies_score': '90',
-            'score_avg': 90.0},
-            {'name': 'Lucas', 
-            'group': '10-2',
-            'spanish_score': '70',
-            'english_score': '70',
-            'scienses_score': '70',
-            'social_studies_score': '70',
-            'score_avg': 70.0}
-            ]
+students = []
 
-#sorted_students = sorted(students, key=lambda x: x['score_avg'], reverse=True)
 
-#print(sorted_students[:3])
+def add_student():
+    while True:
+        try:
+            student = {}
+            student["name"]=input("Student's full name: ")
+            student["group"]=input("Student's group number: ")
+            student["spanish_score"]=int(input("Student's spanish score: "))
+            student["spanish_score"]=validate_score(student["spanish_score"])
+            student["english_score"]=int(input("Student's english score: "))
+            student["english_score"]=validate_score(student["english_score"])
+            student["scienses_score"]=int(input("Student's sciences score: "))
+            student["scienses_score"]=validate_score(student["scienses_score"])
+            student["social_studies_score"]=int(input("Student's social studies score: "))
+            student["social_studies_score"]=validate_score(student["social_studies_score"])
+            student["score_avg"]= (int(student["spanish_score"])+int(student["english_score"])+int(student["social_studies_score"])+int(student["scienses_score"])) /4
+            print("")
+            print("Student successfully added!!")
+            students.append(student)
+            break
+        except ValueError as error:
+            print(f'Ha ocurrido un error: {error}')
+            print("Ingrese una nota en formato valido")
+            error_field = str(error).split("'")[1]
+            #student[error_field] = int(input(f"Corrija el valor de {error_field} por una nota valida: "))
+            #students.append(student)
+            #break
+def validate_score(score):
+    if 0 < score > 100 or score.isdigit() != True:
+        print("Pro favor ingrese una notra valida entre 0 y 100")
+        score = input("Student's correct score: ")
+    return score
 
-all_students_avg = 0
-
-for student in students:
-   all_students_avg += student["score_avg"]
-print(all_students_avg / len(students))
+add_student()

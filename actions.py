@@ -23,7 +23,10 @@ def add_student():
         except ValueError as error:
             print(f'Ha ocurrido un error: {error}')
             print("Ingrese una nota en formato valido")
-
+            error_field = str(error).split("'")[1]
+            student[error_field] = int(input(f"Corrija el valor de {error_field} por una nota valida: "))
+            students.append(student)
+            break
 def validate_score(score):
     if 0 < score > 100:
         print("Pro favor ingrese una notra valida entre 0 y 100")
