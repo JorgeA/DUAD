@@ -9,7 +9,7 @@ class Student:
         self.scienses_score = scienses
         self.social_studies_score = social
         self.english_score = english
-        print("Student record created sucessfully")
+        print("Student created sucessfully")
 
 
 def create_student():
@@ -19,6 +19,14 @@ def create_student():
     science = int(input("Ingrese la calificación de Ciencias: "))
     social = int(input("Ingrese la calificación de Sociales: "))
     english = int(input("Ingrese la calificación de Inglés: "))
-    return Student(name, group, spanish, science, social, english)
-    
+    student = Student(name, group, spanish, science, social, english)
+    students.append(student)
 
+
+def show_all_students():
+    for student in students:
+        print(f"Nombre: {student.name} - Grupo: {student.group} - Español: {student.spanish_score} - Ciencias: {student.scienses_score} - Sociales: {student.social_studies_score} - Inglés: {student.english_score}")
+        print(" ")
+
+create_student()
+show_all_students()

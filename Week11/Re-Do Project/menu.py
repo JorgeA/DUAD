@@ -1,7 +1,5 @@
 import actions
 import data
-from test import students
-import test
 
 
 def menu(user_option):
@@ -24,8 +22,7 @@ def menu(user_option):
 
                 if user_option == 1:
                     print("Adding a student...")
-                    new_student = test.create_student()
-                    students.append(new_student)
+                    actions.create_student()
                 elif user_option == 2:
                     print("Showing all students...")
                     actions.show_all_students()
@@ -36,7 +33,7 @@ def menu(user_option):
                 elif user_option == 5:
                     data.export_students_csv("students.csv",actions.students)
                 elif user_option == 6:
-                    data.import_students("students.csv")
+                    data.import_students_csv("students.csv")
                 elif user_option == 7:
                     break
                 else:
