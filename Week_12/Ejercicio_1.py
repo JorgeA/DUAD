@@ -1,9 +1,10 @@
 class BankAccount:
-    balance = 0
+    def __init__(self):
+        self.balance = 0
 
     def add_money(self, amount):
         self.balance += amount
-        print(f"Transaccion satisfactoria, el saldo actual de su cuenta es {self.balance}")
+        print(f"Transacción satisfactoria, el saldo actual de su cuenta es {self.balance}")
 
     def subtract_money(self, amount):
         if amount > self.balance:
@@ -13,18 +14,19 @@ class BankAccount:
 
 class SavingsAccount(BankAccount):
 
-    def __init__(self):
-        self.min_balance = 8000
+    def __init__(self, min_balance=8000):
+        super().__init__()
+        self.min_balance = min_balance
 
-    def subtract_money(account, amount):
-        real_balance = account.balance - amount
+    def subtract_money(self, amount):
+        real_balance = self.balance - amount
 
-        if real_balance < account.min_balance:
-            print(f"ALERTA !!!, su operacion no es permitida ya que debe mantener un minimo de {account.min_balance} en su cuenta")
+        if real_balance < self.min_balance:
+            print(f"ALERTA !!!, su operacion no es permitida ya que debe mantener un mínimo de {self.min_balance} en su cuenta")
         else:
-            account.subtract_money(amount)
-            print(f"Transaccion exitosa, su saldo actual es {account.balance}")
+            super().subtract_money(amount)
+            print(f"Transacción exitosa, su saldo actual es {self.balance}")
 
-my_account = SavingsAccount()
+my_account = SavingsAccount(min_balance=8000)
 my_account.add_money(10000)
-SavingsAccount.subtract_money(my_account, amount=int(input("Ingrese la cantidad a retirar: ")))
+my_account.subtract_money(amount=int(input("Ingrese la cantidad a retirar: ")))
