@@ -21,8 +21,11 @@ def open_transaction_window(excel_file, transaction_type):
                 description = values["DESCRIPTION"]
                 category = values["CATEGORY"]
                 amount = float(values["AMOUNT"])
+
+                # Call the function with the correct number of arguments
                 add_transaction(description, category, transaction_type, amount, excel_file)
-                sg.popup("Transaccion guardada.")
+
+                sg.popup("Transacción guardada.")
                 break
             except ValueError as e:
                 sg.popup_error(f"Error: {str(e)}")

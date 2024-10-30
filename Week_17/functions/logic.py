@@ -1,37 +1,33 @@
 import pandas as pd
 import os
 
+# Directorio base del proyecto
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Obtiene la ruta del archivo actual
 
-# Ruta a excel
-CATEGORIES_FILE = r"C:\Users\jarg0317\OneDrive - Sysco Corporation\Documents\DUAD\Week_17\data\categories.xlsx"
+# Rutas relativas a la carpeta de datos
+CATEGORIES_FILE = os.path.join(BASE_DIR, '..', 'data', 'categories.xlsx')
+TRANSACTIONS_FILE = os.path.join(BASE_DIR, '..', 'data', 'finanzas.xlsx')
 
-def load_data(excel_file):
-    # Verifique si el archivo Excel existe; si no existe, cree uno.
+def load_data(excel_file=TRANSACTIONS_FILE):
     if not os.path.exists(excel_file):
         create_empty_transactions_file(excel_file)
 
     try:
-        # Lee el contenido del file
         df = pd.read_excel(excel_file, engine='openpyxl')
         return df.values.tolist()
     except Exception as e:
         print(f"Error loading data: {e}")
         return []
 
-
 def create_empty_transactions_file(excel_file):
-    """Creates an empty Excel file with the required structure."""
     df = pd.DataFrame(columns=["Descripcion", "Categoria", "Tipo", "Monto"])
     df.to_excel(excel_file, index=False, engine='openpyxl')
 
-
-def save_data(data, excel_file):
+def save_data(data, excel_file=TRANSACTIONS_FILE):
     df = pd.DataFrame(data, columns=["Descripcion", "Categoria", "Tipo", "Monto"])
     df.to_excel(excel_file, index=False, engine='openpyxl')
 
-
 def load_categories():
-    # Verifica si la categoria existe, sino solicita crearla
     if not os.path.exists(CATEGORIES_FILE):
         create_empty_categories_file()
 
@@ -42,12 +38,9 @@ def load_categories():
         print(f"Error loading categories: {e}")
         return []
 
-
 def create_empty_categories_file():
-    """Creates an empty categories Excel file."""
     df = pd.DataFrame(columns=["Categoria"])
     df.to_excel(CATEGORIES_FILE, index=False, engine='openpyxl')
-
 
 def save_category(category):
     categories = load_categories()
