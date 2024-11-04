@@ -1,8 +1,10 @@
 import PySimpleGUI as sg
+import os
 from functions.logic import load_data, save_category, load_categories
 from gui.add_transaction import open_transaction_window
 
-EXCEL_FILE = r"C:\Users\jarg0317\OneDrive - Sysco Corporation\Documents\DUAD\Week_17\data\finanzas.xlsx"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EXCEL_FILE = os.path.join(BASE_DIR, "data", "finanzas.xlsx")
 
 def launch_main_window():
     data = load_data(EXCEL_FILE)
@@ -30,7 +32,7 @@ def launch_main_window():
                     sg.popup_error(str(e))
         elif event == "Agregar Gasto":
             open_transaction_window(EXCEL_FILE, "Gasto")
-            window["TABLE"].update(values=load_data(EXCEL_FILE))  #Refresca la tabla del main window
+            window["TABLE"].update(values=load_data(EXCEL_FILE))  # Refreshes main window table
         elif event == "Agregar Ingreso":
             open_transaction_window(EXCEL_FILE, "Ingreso")
             window["TABLE"].update(values=load_data(EXCEL_FILE))  
