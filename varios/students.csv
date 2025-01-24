@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+name,group,spanish_score,english_score,sciences_score,social_studies_score,score_avg
+George,10-3,90,100,98,99,96.75
+
+Juana,11-3,89,85,86,58,79.5
+
+Luis,10-1,45,56,89,90,70.0
+=======
+name,group,spanish_score,english_score,scienses_score,social_studies_score,score_avg
+George,10-3,90,100,98,99,96.75
+Juana,11-3,89,85,86,58,79.5
+Luis,10-1,45,56,89,90,70.0
+>>>>>>> c239a9d09fee411df7e3facb21e82570e815210d
