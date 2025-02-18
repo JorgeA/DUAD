@@ -1,0 +1,120 @@
+.main-title {
+    color: #2d2e2e;
+    font-family: var(
+      --zds-typography-heading,
+      "Degular",
+      Helvetica,
+      arial,
+      sans-serif
+    );
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 15px auto 0 auto;
+  }
+  .second-level-title {
+    color: #403f3e;
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-family: var(
+      --zds-typography-base,
+      "Inter",
+      Helvetica,
+      arial,
+      sans-serif
+    );
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .autor{
+      color: #403f3e;
+      margin-top: 20px;
+      text-align: center;
+      font-family: var(--zds-typography-base, "Inter", Helvetica, arial, sans-serif);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+  }
+  .social-media-icons{
+      display: grid;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      grid-template-columns: 30px 30px 30px;
+      grid-column-gap: 30px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+  .image{
+      border-radius: 3px;
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
+  }
+  .articulo{
+      overflow: auto;
+  }
+  .contenedor-articulo{
+      margin-bottom: 20px;
+      margin-top: 20px;
+      background-color: rgb(234, 234, 241);
+  }
+  .parrafo-art{
+      color: #403f3e;
+      font-family: var(--zds-typography-base, "Inter", Helvetica, arial, sans-serif);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+  }
+  .text-in-gray{
+      font-style: italic;
+  }
+  .link{
+      color: var(--zds-text-link, #3d4592);
+  }
+  .parafo-principal{
+      color: #403f3e;
+      font-family: var(--zds-typography-base, "Inter", Helvetica, arial, sans-serif);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+  .anuncio{
+      background-color: #ffbf6e;
+      border-radius: 5px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+  }
+  .text-anuncio{
+      font-family: var(--zds-typography-base, "Inter", Helvetica, arial, sans-serif);
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 700;
+      letter-spacing: normal;
+      color: #2d2e2e;
+  }
+  .contenedor-boton-anuncio{
+      display: flex;
+      padding: 25px 0;
+      align-items: center;
+      justify-content: center;
+  }
+  .button-anuncio{
+      font: var(--zds-body-3, 600 16px / 24px var(--zds-typography-base, "Inter", Helvetica, arial, sans-serif));
+      cursor: pointer;
+      border-bottom: #2d2e2e;
+      color: rgb(235, 246, 255);
+      margin-top: 25px;
+      background-color: black;
+      padding: 20px;
+      width: 40%;
+  }
+  

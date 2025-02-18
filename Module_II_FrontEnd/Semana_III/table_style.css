@@ -1,0 +1,120 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body & Wrapper */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .table-container {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+
+  .chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+
+  .chart-table th,
+  .chart-table td {
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 0x;
+  }
+  
+  .rank-header   { width: 50px; }
+  .album-header  { width: 80px; }
+  .change-header { width: 40px; }
+  .song-header   { width: 320px; } 
+  .award-header  { width: 40px; }
+  .stat-header   { width: 50px; }
+  
+  .blue-header {
+    background-color: #0033a0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    word-wrap: break-word;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .rank {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+
+  .album-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+  }
+
+  .change-col {
+    font-size: 16px; 
+  }
+  .arrow-up {
+    color: green;
+  }
+  .arrow-down {
+    color: red;
+  }
+  .new-badge {
+    background-color: yellow;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: black;
+  }
+  
+  .song-info {
+    text-align: left;
+  }
+  .song-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .artist {
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .award-col {
+    background-color: #e4e3e3;
+    font-size: 20px;
+  }
+  
+  .stat-col {
+    background-color: #e4e3e3;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .wks-count strong {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .stat-col_wkcount{
+    background-color: white;
+  }
