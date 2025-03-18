@@ -1,0 +1,44 @@
+.poster{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: space-evenly;
+    background-color: #fbf0f3;
+    .poster-image{
+        height: 20rem;
+        margin: 0 2rem;
+    }
+    .poster-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;       
+        p{
+            margin: 0;
+        }
+        .sup-text{
+            text-transform: uppercase;
+        }
+        .main-text{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .price-text{
+            color:rgb(237, 14, 140);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .shop-button{
+            background-color: rgb(237, 14, 140);
+            border-radius: 0.5rem;
+            color: white;
+            text-transform: uppercase;
+            width: 7rem;
+            height: 2rem;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
