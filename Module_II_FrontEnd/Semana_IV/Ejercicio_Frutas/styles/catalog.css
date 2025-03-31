@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contain {
+  padding: 0 10%;
+}
+.poster {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-evenly;
+  background-color: #fbf0f3;
+}
+.poster-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sup-text {
+  text-transform: uppercase;
+}
+.price-text {
+  color: rgb(237, 14, 140);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.shop-button {
+  background-color: rgb(237, 14, 140);
+  border-radius: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.cards-container {
+  padding: 20px;
+}
+.title-container {
+  margin-bottom: 1rem;
+}
+.main-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+.sub-title {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #555;
+}
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1.5%;
+}
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card h3,
+.card h2 {
+  margin: 16px;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #333;
+}
+.card p {
+  margin: 0 16px 16px 16px;
+  font-size: 0.95rem;
+  line-height: 1.4em;
+  color: #555;
+}
+.card a {
+  margin: auto 16px 16px auto;
+  text-decoration: none;
+  color: #fdfeff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.card a:hover {
+  color: #2980b9;
+}
+.btn {
+  background-color: black;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.search-input {
+  width: 180px;
+  padding: 8px;
+  padding-right: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
